@@ -1,6 +1,2 @@
-image: ghcr.io/home-assistant/{arch}-base-ubuntu
-cosign:
-  identity: https://github.com/home-assistant/docker-base/.*
-labels:
-  io.hass.base.name: ubuntu
-  org.opencontainers.image.source: https://github.com/home-assistant/docker-base
+build_from:
+  amd64: ghcr.io/home-assistant/amd64-base-ubuntu:latest

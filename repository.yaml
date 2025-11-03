@@ -1,4 +1,4 @@
 # https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
-name: Akrhin - Home Assistant add-on repository, fork of Anonymoesje
-url: 'https://github.com/akrhin/home-assistant-magic'
+name: Akrhin - Home Assistant add-on repository, fork of Akrhin/home-assistant-wazuh-agent
+url: 'https://github.com/Akrhin/home-assistant-wazuh-agent'
 maintainer: Akrhin

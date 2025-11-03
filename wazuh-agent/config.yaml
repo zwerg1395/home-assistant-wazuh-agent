@@ -3,7 +3,7 @@ name: Wazuh Agent
 version: "1.0.0"
 slug: whagent
 description: Wazuh Agent
-url: "https://github.com/Anonymoesje/home-assistant-magic/tree/main/wazuh-agent"
+url: "https://github.com/Akrhin/home-assistant-wazuh-agent/tree/main/wazuh-agent"
 arch:
   - amd64
 init: false

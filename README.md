@@ -1,6 +1,6 @@
 # Home Assistant Magic add-on repository (fork)
 
-This repository contains magical addons. This is a fork of `akrhin/home-assistant-magic` maintained by Anonymoesje. This fork is additionally maintained by Akrhin.
+This repository contains magical addons. This is a fork of `Akrhin/home-assistant-wazuh-agent` maintained by Akrhin/home-assistant-wazuh-agent. This fork is additionally maintained by Akrhin.
 
 [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fhome-assistant%2Faddons-example)
 
@@ -8,9 +8,9 @@ This repository contains magical addons. This is a fork of `akrhin/home-assistan
 
 This repository contains the following add-ons
 
-### [Wazuh agent addon](https://github.com/Anonymoesje/home-assistant-magic/tree/main/wazuh-agent)
+### [Wazuh agent addon](https://github.com/Akrhin/home-assistant-wazuh-agent/)
 
-Maintainers: Anonymoesje, Akrhin
+Maintainers: Akrhin/home-assistant-wazuh-agent, Akrhin
 
 ![Supports amd64 Architecture][amd64-shield]
 
