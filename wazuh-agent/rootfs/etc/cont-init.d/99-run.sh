@@ -24,13 +24,25 @@ export WAZUH_AGENT_NAME=${AGENT_NAME}
 # Update manager IP in config
 sed -i "s|MANAGER_IP|$WAZUH_MANAGER|g" /var/ossec/etc/ossec.conf
 
-# Set agent name in config
-# First, try to replace existing agent_name
-if grep -q "<agent_name>" /var/ossec/etc/ossec.conf; then
-    sed -i "s|<agent_name>.*</agent_name>|<agent_name>$WAZUH_AGENT_NAME</agent_name>|g" /var/ossec/etc/ossec.conf
+# Set agent name in config within <client><enrollment>
+# 1) If <enrollment> exists, replace or add <agent_name> inside the block
+if grep -q "<enrollment>" /var/ossec/etc/ossec.conf; then
+    # Try to replace existing agent_name inside enrollment block
+    sed -i '/<enrollment>/,/<\/enrollment>/ s|<agent_name>.*</agent_name>|<agent_name>'"$WAZUH_AGENT_NAME"'</agent_name>|g' /var/ossec/etc/ossec.conf
+
+    # If still no agent_name in the enrollment block, insert it after <enrollment>
+    if ! awk '/<enrollment>/{flag=1} /<\/enrollment>/{flag=0} flag && /<agent_name>/{found=1} END{exit !found}' /var/ossec/etc/ossec.conf; then
+        sed -i '/<enrollment>/,/<\/enrollment>/{ /<enrollment>/ a\
+      <agent_name>'"$WAZUH_AGENT_NAME"'</agent_name>
+        }' /var/ossec/etc/ossec.conf
+    fi
 else
-    # Add agent_name inside <client> section if not present
-    sed -i "/<client>/a\    <agent_name>$WAZUH_AGENT_NAME</agent_name>" /var/ossec/etc/ossec.conf
+    # 2) No <enrollment> block: create a minimal one before </client>
+    sed -i '/<\/client>/ i\
+    <enrollment>\
+      <enabled>yes<\/enabled>\
+      <agent_name>'"$WAZUH_AGENT_NAME"'<\/agent_name>\
+    <\/enrollment>' /var/ossec/etc/ossec.conf
 fi
 
 bashio::log.info "Agent name set to: ${WAZUH_AGENT_NAME}"

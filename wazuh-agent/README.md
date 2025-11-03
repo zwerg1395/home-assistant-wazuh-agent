@@ -2,8 +2,7 @@
 
 _Add-on to add a wazuh-agent to Home Assistant._ This fork tracks the latest Wazuh Agent during image build and currently supports `amd64` only. Upstream: `Akrhin/home-assistant-wazuh-agent`.
 
-[![Donate][donation-badge]](https://www.buymeacoffee.com/Akrhin/home-assistant-wazuh-agent)
-![Supports amd64 Architecture][amd64-shield]
+[Supports amd64 Architecture][amd64-shield]
 
 What is sent to Wazuh by default?
 
@@ -25,4 +24,3 @@ How to forward Home Assistant logs:
 3. Restart the add-on.
 
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
-[donation-badge]: https://img.shields.io/badge/donate-buymeacoffee-yellow.svg
