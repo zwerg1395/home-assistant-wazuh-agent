@@ -25,6 +25,10 @@ RUN apt-get update \
         yamllint \
     && rm -rf /var/lib/apt/lists/*
 
+# Normalize script line endings and ensure executable permissions
+RUN find /etc/cont-init.d -type f -name "*.sh" -exec sed -i 's/\r$//' {} + \
+    && chmod 0755 /etc/cont-init.d/*.sh
+
 # Install latest Wazuh Agent from official repository
 RUN apt-get update \
     && install -d -m 0755 /usr/share/keyrings \

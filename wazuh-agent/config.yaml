@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Wazuh Agent
-version: "1.0.1"
+version: "1.0.2"
 slug: whagent
 description: Wazuh Agent
 url: "https://github.com/Akrhin/home-assistant-wazuh-agent/tree/main/wazuh-agent"
