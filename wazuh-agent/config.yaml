@@ -1,0 +1,23 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: Wazuh Agent
+version: "1.0.0"
+slug: whagent
+description: Wazuh Agent
+url: "https://github.com/Anonymoesje/home-assistant-magic/tree/main/wazuh-agent"
+arch:
+  - amd64
+init: false
+backup_exclude:
+  - "**/log/"
+map:
+  - share:rw
+ports:
+  1514/tcp: 1514
+  1515/tcp: 1515
+ports_description:
+  1514/tcp: "Agent connection service"
+  1515/tcp: "Agent enrollment service"
+options:
+  managerip: "192.168.0.1"
+schema:
+  managerip: "str?"

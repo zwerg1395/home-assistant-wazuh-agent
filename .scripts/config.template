@@ -1,0 +1,4 @@
+# All env variables set in this file will be enabled in the app
+# Validate with http://www.yamllint.com/
+# EXAMPLE
+# TZ: Europe/Paris
