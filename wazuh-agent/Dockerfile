@@ -1,4 +1,4 @@
-FROM ghcr.io/home-assistant/amd64-base-ubuntu:latest
+FROM ghcr.io/home-assistant/aarch64-base-ubuntu:latest
 
 SHELL ["/bin/bash", "-c"]
 
