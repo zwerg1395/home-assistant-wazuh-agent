@@ -18,7 +18,7 @@ if ! command -v curl >/dev/null 2>/dev/null; then
 fi
 
 # Call apps installer script if needed
-curl -f -L -s -S "https://raw.githubusercontent.com/Anonymoesje/home-assistant-magic/main/.scripts/ha_install_packages.sh" --output /ha_install_packages.sh
+curl -f -L -s -S "https://raw.githubusercontent.com/zwerg1395/home-assistant-magic/main/.scripts/ha_install_packages.sh" --output /ha_install_packages.sh
 chmod 777 /ha_install_packages.sh
 eval /./ha_install_packages.sh "${PACKAGES:-}"
 
