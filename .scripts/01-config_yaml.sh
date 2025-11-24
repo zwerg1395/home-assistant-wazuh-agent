@@ -100,7 +100,7 @@ if [ ! -f "$CONFIGSOURCE" ]; then
         cp /templates/config.yaml "$(dirname "${CONFIGSOURCE}")"
     else
         # Download template
-        TEMPLATESOURCE="https://raw.githubusercontent.com/Anonymoesje/home-assistant-magic/main/.scripts/config.template"
+        TEMPLATESOURCE="https://raw.githubusercontent.com/zwerg1395/home-assistant-magic/main/.scripts/config.template"
         curl -f -L -s -S "$TEMPLATESOURCE" --output "$CONFIGSOURCE"
     fi
 fi
