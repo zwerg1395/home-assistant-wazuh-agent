@@ -5,7 +5,7 @@ slug: whagent
 description: Wazuh Agent
 url: "https://github.com/Akrhin/home-assistant-wazuh-agent/tree/main/wazuh-agent"
 arch:
-  - amd64
+  - aarch64
 init: false
 backup_exclude:
   - "**/log/"
